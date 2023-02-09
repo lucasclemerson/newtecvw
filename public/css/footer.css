@@ -1,0 +1,100 @@
+footer{
+    width: 100%;
+    margin: 0;
+    background-color: #22405D;
+    padding: 0;
+}
+
+.apresentation{
+    text-align: center;
+    background-color: white;
+    padding: 0;
+    z-index: 0;
+    padding-bottom: 40px;
+}
+
+.apresentation > img{
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+.rodape {
+    text-align: center;
+    padding:0;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.column {
+    width: 30%;
+    margin: 10px;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.title{
+    color:white;
+    text-align: start;
+    font-size: 1.6em;
+    font-weight: 600;
+    margin: 0;
+    padding:0;
+    text-align: center;
+}
+
+.lista{
+    width: 100%;
+    text-align: start;
+    color:aliceblue;
+    margin-top: 40px;
+}
+
+.item-rodape, .i-fixed{
+    font-size: 1.2em;
+    text-decoration:none;
+    color:cornsilk;
+    margin-bottom: 10px;
+    display: block;
+    opacity: 0.8;
+}
+
+.i-fixed{
+    opacity: 1;
+    color:white;
+    cursor: pointer;
+}
+
+.item-rodape:hover{
+    color:white;
+    opacity: 1;
+}
+
+.copyritgh{
+    width:100%;
+    margin: auto;
+    padding:0;
+    box-shadow: -4px -4px 4px -4px white;
+}
+
+.copyritgh > p{
+    padding-top: 20px;
+    color:white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+.icone-whatsapp{
+    position: fixed;
+    bottom: 20px;
+    right:20px;
+}
+
+.icone-whatsapp > a > img{
+    height:100px;
+    width: 100px;
+}

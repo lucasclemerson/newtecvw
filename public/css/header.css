@@ -1,0 +1,77 @@
+header{
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom:4px;
+    -webkit-box-shadow: 0 4px 6px -8px #222;
+    -moz-box-shadow: 0 4px 6px -8px #222;
+    box-shadow: 0 4px 6px -8px #222;
+    z-index: 1;
+    background-color: white;
+}
+
+header > div:last-child{
+    clear: both;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    height: auto;
+    padding:4px 2px;
+}
+
+.container > *{
+    align-items: center;
+}
+
+.lista-opcoes{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding:0;
+}
+
+.item {
+    height: auto;
+    display: inline-block;
+    padding: 0px;
+    margin: 0;
+    float: right;
+}
+
+.item:first-child{
+    float: left;
+}
+
+.logomarca{
+    width:200px;
+    height: auto;
+    float:left;
+    padding: 0;
+    margin: 0;
+    margin-right: 40px;
+}
+
+.item > a{
+    height:auto;
+    font-size:1.2em;
+    font-weight: 800;
+    display: inline-block;
+    text-decoration: none;
+    color:#22405D;
+    margin:auto;
+    padding: 10px;
+    margin-left: 30px;
+    opacity: .8;
+    transition: all .6s ;
+}
+
+.item > a:hover{
+    opacity: 1;
+    -webkit-text-stroke: 1px #22405D;
+    transition-timing-function: ease-in-out;
+}

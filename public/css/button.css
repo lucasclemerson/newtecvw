@@ -1,0 +1,35 @@
+.btn-primary-blue{
+    padding: 10px 20px;
+    color:white;
+    background-color: #22405D;
+    border: none;
+    font-size: 1.2em;
+    border-radius: 4px;
+    margin-left: 30px;
+    cursor:pointer;
+}
+
+.btn-primary-blue > i{
+    color:white;
+    font-size: .8em;
+    margin-right: 10px;
+}
+
+.btn-toggle{
+    padding: 10px 20px;
+    color:#22405D;
+    background-color: #cfcfcf;
+    opacity: 0.5;
+    border: none;
+    font-size: 1.2em;
+    border-radius: 4px;
+    margin-left: 30px;
+    cursor:pointer;
+    float:right
+}
+
+.btn-toggle::before,
+.btn-toggle:focus,
+.btn-toggle:visited{
+    background-color: #cfcfcf;
+}

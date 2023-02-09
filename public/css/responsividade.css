@@ -1,0 +1,43 @@
+@media screen and (min-width:1200px){
+    .btn-toggle{display: none;}
+}
+
+@media screen and (max-width:1200px){
+    .hidden{
+        display: none;
+        width:100%;
+        margin: 0;
+        margin-top: 10px;
+        float:none;
+        text-align: center;
+        background-color: #cfcfcf;
+        border-radius: 4px;
+    }
+    .btn-primary-blue>i{
+        display: none;
+    }
+    .lista-opcoes > .btn-primary-blue{
+        margin: 0;
+        margin-top: 100px;
+        text-align: center;
+    }
+    .btn-toggle{
+        display: block;
+    }
+}
+
+@media screen and (max-width:700px){
+    .column{
+        width:80%;
+        margin:auto;
+        margin-bottom:40px;
+        text-align: center;
+    }
+    .item-rodape{
+        text-align: center;
+    }
+    .copyritgh > p{
+        width: 80%;
+        margin: auto;
+    }
+}
