@@ -3,16 +3,23 @@
     color:white;
     background-color: #22405D;
     border: none;
-    font-size: 1.2em;
+    font-size: 1.1em;
     border-radius: 4px;
     margin-left: 30px;
     cursor:pointer;
+    opacity: .8;
+    transition: all .8s ;
 }
 
 .btn-primary-blue > i{
     color:white;
     font-size: .8em;
     margin-right: 10px;
+}
+
+
+.btn-primary-blue:hover{
+    opacity: 1;
 }
 
 .btn-toggle{
@@ -26,10 +33,42 @@
     margin-left: 30px;
     cursor:pointer;
     float:right
+    opacity: .9;
 }
 
 .btn-toggle::before,
 .btn-toggle:focus,
 .btn-toggle:visited{
+    opacity: 1;
     background-color: #cfcfcf;
 }
+
+.btn-prev,
+.btn-next{
+    height: auto;
+    position: absolute;
+    top: 50%;
+    vertical-align: middle;
+    background-color: #fffA;
+    border-radius: 50%;
+    z-index: 9;
+    border:0;
+    color:white;
+    padding: 10px;
+    margin: 10px;
+    left: 0;
+    cursor: pointer;
+    opacity: .8;
+
+}
+
+.btn-next{
+    right: 0;
+    left: auto;
+}
+
+.btn-prev:hover,
+.btn-next:hover{
+    opacity: 1;
+}
+

@@ -18,11 +18,23 @@
     }
     .lista-opcoes > .btn-primary-blue{
         margin: 0;
-        margin-top: 100px;
+        margin-top: 40px;
         text-align: center;
+        visibility: hidden;
     }
     .btn-toggle{
         display: block;
+        float:right;
+    }
+
+    .imagem-preview{
+        height:550px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .imagem-preview{
+        height:450px;
     }
 }
 
@@ -39,5 +51,14 @@
     .copyritgh > p{
         width: 80%;
         margin: auto;
+    }
+    .imagem-preview{
+        height:400px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .imagem-preview{
+        height:300px;
     }
 }

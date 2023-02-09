@@ -15,22 +15,10 @@
         <link href=" {{ asset('css/responsividade.css') }}" rel="stylesheet" type="text/css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            var show = true;
-            function click_toggle_show_menu (){
-                var list = document.getElementsByClassName('hidden');
-                if (show){
-                    for (var i=0; i<list.length;i++){
-                        list[i].style.display="block";
-                    }
-                }else{
-                    for (var i=0; i<list.length;i++){
-                        list[i].style.display="none";
-                    }
-                }
-                show = !show;
-            }
-        </script>
+        <script src="/js/script.js" type="text/javascript"></script>         
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+       
     </head>
     <body>
         {{--inicializando o cabeçario da página--}}
@@ -41,7 +29,7 @@
                         <img class="logomarca" src="{{ url('img/logomarca-vertical.png') }}">
                     </li>
         
-                    <button onClick="click_toggle_show_menu();" class="btn-toggle">
+                    <button class="btn-toggle" id="btn-toggle">
                         <i class="bi bi-list"></i>
                     </button>
         
