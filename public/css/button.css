@@ -30,9 +30,11 @@
     border: none;
     font-size: 1.2em;
     border-radius: 4px;
-    margin-left: 30px;
+    margin-top: 10px;
+    margin-right: 40px;
     cursor:pointer;
-    float:right
+    float:right;
+    height: 40px;
     opacity: .9;
 }
 
@@ -47,7 +49,7 @@
 .btn-next{
     height: auto;
     position: absolute;
-    top: 50%;
+    top: 40%;
     vertical-align: middle;
     background-color: #fffA;
     border-radius: 50%;

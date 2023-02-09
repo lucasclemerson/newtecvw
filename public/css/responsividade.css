@@ -5,14 +5,16 @@
 @media screen and (max-width:1200px){
     .hidden{
         display: none;
-        width:100%;
-        margin: 0;
+        width:60%;
+        margin: auto;
         margin-top: 10px;
         float:none;
         text-align: center;
         background-color: #cfcfcf;
         border-radius: 4px;
     }
+    
+    .hidden-now,
     .btn-primary-blue>i{
         display: none;
     }
@@ -26,15 +28,18 @@
         display: block;
         float:right;
     }
-
-    .imagem-preview{
-        height:550px;
+    .lista-opcoes{
+        padding-bottom: 10px;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        background-color: white;
     }
 }
 
 @media screen and (max-width: 1000px){
     .imagem-preview{
-        height:450px;
+        height:350px;
     }
 }
 
@@ -53,12 +58,7 @@
         margin: auto;
     }
     .imagem-preview{
-        height:400px;
+        height:250px;
     }
 }
 
-@media screen and (max-width: 550px){
-    .imagem-preview{
-        height:300px;
-    }
-}

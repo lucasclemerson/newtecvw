@@ -4,12 +4,7 @@ header{
     width: 100%;
     height: auto;
     padding: 0;
-    padding-top: 10px;
-    padding-bottom:4px;
-    -webkit-box-shadow: 0 4px 6px -8px #222;
-    -moz-box-shadow: 0 4px 6px -8px #222;
-    box-shadow: 0 4px 6px -8px #222;
-    z-index: 1;
+    z-index:99;
     background-color: white;
 }
 
@@ -17,34 +12,40 @@ header > div:last-child{
     clear: both;
 }
 
-.container{
-    width:90%;
-    margin:auto;
-    height: auto;
-    padding:4px 2px;
-}
 
-.container > *{
-    align-items: center;
-}
-
-.lista-opcoes{
+.lista-contato, .lista-opcoes{
     display: inline-block;
     position: relative;
     width: 100%;
     padding:0;
+    margin: auto;
+    text-align: center;
 }
+
+.lista-opcoes{
+    padding: 10px 0;
+    background-color: #22405D;
+}
+
 
 .item {
+    padding: 0px;
+    margin: auto;
     height: auto;
     display: inline-block;
-    padding: 0px;
-    margin: 0;
-    float: right;
+    text-align: center;
 }
 
-.item:first-child{
+.lista-contato .item{
     float: left;
+}
+
+.lista-contato a{
+    text-decoration: none;
+    float: right;
+    margin-right: 40px;
+    margin-top: 10px;
+    border-radius: 30px;
 }
 
 .logomarca{
@@ -53,7 +54,8 @@ header > div:last-child{
     float:left;
     padding: 0;
     margin: 0;
-    margin-right: 40px;
+    margin-left: 40px;
+    padding: 10px 0;
 }
 
 .item > a{
@@ -62,7 +64,7 @@ header > div:last-child{
     font-weight: 400;
     display: inline-block;
     text-decoration: none;
-    color:#22405D;
+    color:#fff;
     margin:auto;
     padding: 10px;
     margin-left: 30px;
@@ -72,6 +74,6 @@ header > div:last-child{
 
 .item > a:hover{
     opacity: 1;
-    -webkit-text-stroke: 1px #22405D;
+    -webkit-text-stroke: 1px white;
     transition-timing-function: ease-in-out;
 }

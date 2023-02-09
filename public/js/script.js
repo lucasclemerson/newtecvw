@@ -1,8 +1,11 @@
 $().ready(function(){   
     //variables
     var show = true;
-    var indexCarousel = 0;
-
+    var delayCarousel = 1000;
+    var indexCarousel = -1;
+    let videoOne = document.getElementById('video-carousel0');
+    let videoTwo = document.getElementById('video-carousel1');
+   
 
     $('#btn-toggle').click(function(){
         if (show){
@@ -15,23 +18,39 @@ $().ready(function(){
             });
         }
         show = !show;
-    });
-    $('.btn-prev').click(function(){prevCarousel()});
-    $('.btn-next').click(function(){nextCarousel()});
+    }); 
+ 
 
-
+    //start carousel
     roadCarousel();
+
+    $('.btn-prev').click(function(){prevCarousel();});
+    $('.btn-next').click(function(){nextCarousel();});
+
     function roadCarousel () {
+        videoOne.volume="0.1";
+        videoTwo.volume="0.1";
         indexCarousel ++;
+        delayCarouse=5000;    
         if (indexCarousel >= $('.slider').length) {
             indexCarousel=0;
+            videoOne.play();
+            videoOne.currentTime = 0;
+            videoTwo.pause();
+            delayCarouse = videoOne.duration*1000;
+        }else if(indexCarousel == 1) { 
+            videoTwo.play();
+            videoTwo.currentTime = 0;
+            videoOne.pause();
+            delayCarouse = videoTwo.duration*1000;
+        }else{
+            videoOne.pause();
+            videoTwo.pause();
         }
-
         $.each($('.slider'), function (i, e){
             e.style.display='none';
             document.getElementById('input'+i).checked=false;
         });
-
         try {
             document.getElementById('input'+indexCarousel).checked=true;
             $('.slider')[indexCarousel].style.display = "block"; 
@@ -41,41 +60,61 @@ $().ready(function(){
             $.each($('.slider'), function (i, e){
                 e.style.display='none';
             });
-
             document.getElementById('input'+indexCarousel).checked=true;
             $('.slider')[indexCarousel].style.display = "block"; 
         }
-        setTimeout(roadCarousel, 5000);
+        setTimeout(roadCarousel, delayCarouse);
     }
     function nextCarousel (){
         indexCarousel ++;
         if (indexCarousel >= $('.slider').length) {
             indexCarousel=0;
+            videoOne.play();
+            videoOne.currentTime = 0;
+            videoTwo.pause();
+        }else if(indexCarousel == 1) { 
+            videoTwo.play();
+            videoTwo.currentTime = 0;
+            videoOne.pause();
+        }else{
+            videoOne.pause();
+            videoTwo.pause();
         }
 
         $.each($('.slider'), function (i, e){
-            document.getElementById('input'+i).checked=false;
             e.style.display='none';
+            document.getElementById('input'+i).checked=false;
         });
 
         try {
-            document.getElementById('input'+indexCarousel).checked=true;
             $('.slider')[indexCarousel].style.display = "block"; 
+            document.getElementById('input'+indexCarousel).checked=true;
         }
         catch (e) {
             indexCarousel=0;
             $.each($('.slider'), function (i, e){
                 e.style.display='none';
             });
-            document.getElementById('input'+indexCarousel).checked=true;
             $('.slider')[indexCarousel].style.display = "block"; 
+            document.getElementById('input'+indexCarousel).checked=true;
         }
     }
     function prevCarousel (){
         indexCarousel --;
         if (indexCarousel < 0) {
-            indexCarousel=$('.slider').length;
+            indexCarousel=0;
+            videoOne.play();
+            videoOne.currentTime = 0;
+            videoTwo.pause();
+        }else if(indexCarousel == 1) { 
+            videoTwo.play();
+            videoTwo.currentTime = 0;
+            videoOne.pause();
+        }else{
+            videoOne.pause();
+            videoTwo.pause();
         }
+
         $.each($('.slider'), function (i, e){
             e.style.display='none';
             document.getElementById('input'+i).checked=false;
@@ -96,47 +135,3 @@ $().ready(function(){
     }
 
 });
-
-
-
-
-
-/*
-
- var planos_index = 1;
-    passar_planos();
-
-    function passar_planos (){
-        var content = document.getElementsByClassName("my-list-card-planos");
-    
-       
-        if (planos_index > content.length) {
-            planos_index = 1;
-        }
-
-        try {
-            content[planos_index-1].style.display = "block";  
-            content[planos_index-1].style.opacity = "0.2";  
-            content[planos_index].style.display = "block";  
-            content[planos_index].style.opacity = "1";    
-            content[planos_index].style.transition = "5s";  
-            content[planos_index+1].style.display = "block";    
-            content[planos_index+1].style.opacity = "0.2";   
-        }
-        catch (e) {
-            planos_index=1;
-            for (i = 0; i < content.length; i++) {
-                content[i].style.display = "none";  
-                content[i].style.opacity = "1";  
-            }
-
-            content[planos_index-1].style.display = "block";  
-            content[planos_index-1].style.opacity = "0.2";  
-            content[planos_index].style.display = "block";   
-            content[planos_index].style.opacity = "1";  
-            content[planos_index+1].style.display = "block";   
-            content[planos_index+1].style.opacity = "0.2";   
-        }
-        setTimeout(passar_planos, 5000);
-    }
-*/
