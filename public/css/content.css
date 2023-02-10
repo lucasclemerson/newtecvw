@@ -23,12 +23,13 @@ main{
 .container-dots{
     margin-top: -50px;
     margin-bottom: 100px;
+    text-align: center;
     z-index: 999;
 }
 
 .gif-down-page{
     margin: auto;
-    margin-top: -100px;
+    margin-top: -60px;
     width: 100px;
     height: 60px;
     display: block;
@@ -37,27 +38,70 @@ main{
 }
 
 .gif-down-page:last-child{
-    margin-top: -50px;
+    margin-top: -80px;
+    z-index: 999;
 }
 
-
-.image-select{
+.file-select{
     border-radius: 0;
     padding:2px;  
     font-size: 2rem;
-    background-color: red;
     opacity: .6;
+    background-color: #fff;
+    margin: auto;
+    margin-right: 20px;
+    text-align: center;
+    width: 40px;
+    height: 4px;
+    display: inline-block;
+
 }
 
-input[type="radio"] {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #fff;
-  margin: 0;
-  width: 40px;
-  height: 2px;
-}
-
-input[type="radio"]:checked{
+.checked{
     opacity: 1;
 }
+
+
+
+
+
+/*list car's*/
+
+.title-body{
+    float:left;
+    margin: auto;
+    padding-bottom: 20px;
+    margin-left: 40px;
+    margin-top: 30px;
+    text-align: strat;
+}
+
+.title-body h2, 
+.title-body h1{
+    text-align: start;
+    display: inline-block;
+    font-size: 1.8em ;
+}
+
+.title-body h2{
+    color: #000b;
+    padding: 20px;
+    padding-top: 0;
+    border-bottom: 4px solid lightblue;
+    margin-right:10px;
+    border-radius: 20px 0px 20px 20px; 
+}
+
+.title-body h1{
+    font-size: 2.3em;
+    color: lightskyblue;
+    font-weight: 900;
+    opacity: 1;
+}
+
+
+
+
+
+
+

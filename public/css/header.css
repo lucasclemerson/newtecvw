@@ -23,10 +23,9 @@ header > div:last-child{
 }
 
 .lista-opcoes{
-    padding: 10px 0;
+    padding: 11px 0;
     background-color: #22405D;
 }
-
 
 .item {
     padding: 0px;
@@ -58,7 +57,7 @@ header > div:last-child{
     padding: 10px 0;
 }
 
-.item > a{
+.item > button{
     height:auto;
     font-size:1.2em;
     font-weight: 400;
@@ -69,8 +68,54 @@ header > div:last-child{
     padding: 10px;
     margin-left: 30px;
     opacity: .9;
+    background-color: #fff0;
+    border:none;
     transition: all .9s ;
+    cursor: pointer;
 }
+
+.item {
+    position: relative;
+}
+
+.lista-opcoes button ion-icon {
+    vertical-align: middle;
+    transition: .8s;
+}
+
+.lista-header{
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    top: 100%;
+    width: 160%;
+    position: absolute;
+    z-index: 9999;
+    transition: 2s;
+}
+
+
+.lista-header > a{
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #22405D;
+    opacity: .8;
+}
+
+.lista-header > a:hover{
+    font-weight: 600;
+    opacity: 1;
+}
+
+
+.icon-ativo{
+    vertical-align: bottom;
+    transform: rotate(-180deg);    
+}
+
 
 .item > a:hover{
     opacity: 1;

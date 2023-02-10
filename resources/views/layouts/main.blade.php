@@ -24,7 +24,7 @@
         {{--inicializando o cabeçario da página--}}
         <header class="container-fluid w-100 p-0 m-0">
             <ul class="lista-contato">
-                <button class="btn-toggle" id="btn-toggle">
+                <button class="btn-toggle">
                     <i class="bi bi-list"></i>
                 </button>
 
@@ -36,34 +36,74 @@
                    <ion-icon name="location-outline"></ion-icon>
                    Caicó, RN
                 </a>
-
             </ul>
             <ul class="lista-opcoes">
                 <li class="item hidden">
-                    <a href="#">Novos</a>
+                    <button class="btn-opcoes">
+                        Novos
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </button>
+                    <div class="lista-header">
+                        <a href="#">Gol</a>
+                        <a href="#">Novo Pollo</a>
+                    </div>
                 </li>
 
                 <li class="item hidden">
-                    <a href="#">Serviços</a>
+                    <button>Seminovos</button>
                 </li>
     
                 <li class="item hidden">
-                    <a href="#">Peças & Acessórios</a>
+                    <button class="btn-opcoes">
+                        Vendas Corporativas
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </button>
+
+                    <div class="lista-header">
+                        <a href="#">Empresas</a>
+                        <a href="#">Frotistas</a>
+                        <a href="#">Táxi</a>
+                        <a href="#">PCD</a>
+                        <a href="#">Produtor Rural</a>
+                        <a href="#">Locadores</a>
+                    </div>
                 </li>
     
                 <li class="item hidden">
-                    <a href="#">Contatos</a>
+                    <button class="btn-opcoes">
+                        Pós Vendas
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </button>
+
+                    <div class="lista-header">
+                        <a href="#">Serviços</a>
+                        <a href="#">Funilária e Pintura</a>
+                        <a href="#">Assistência Técnica</a>
+                        <a href="#">Peças</a>
+                    </div>
                 </li>
 
+                <li class="item hidden">
+                    <button>
+                        Financiamentos
+                    </button>   
+                </li>
 
                 <li class="item hidden">
-                    <a href="#">Fale conosco</a>
+                    <button>Entrar</button>
                 </li>
-    
-                <button class="item btn-primary-blue hidden">
-                    <i class="bi bi-calendar-week"></i>
-                    Agendamento
-                </button>
+
+                <li class="item hidden"> 
+                    <button class="btn-opcoes">
+                        Fale conosco
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </button>
+                    <div class="lista-header">
+                        <a href="#">Quem somos</a>
+                        <a href="#">Contato</a>
+                        <a href="#">Trabalhe conosco</a>
+                    </div>
+                </li>
             </ul>
             <div></div>
         </header>
@@ -151,4 +191,6 @@
             </div>
         </footer>    
     </body>
+
+    <script type="text/javascript" src="/js/script_down.js"></script>
 </html>
