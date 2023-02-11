@@ -66,14 +66,15 @@ main{
 
 
 /*list car's*/
-
 .title-body{
+    width: 100%;
+    display: block;
     float:left;
     margin: auto;
     padding-bottom: 20px;
-    margin-left: 40px;
     margin-top: 30px;
-    text-align: strat;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 .title-body h2, 
@@ -99,9 +100,90 @@ main{
     opacity: 1;
 }
 
+.container-carros{
+    content: '';
+    padding: 40px 0px;
+    width: 100%;
+    margin: auto;
+    vertical-align: middle;
+    text-align: start;
+    justify-content: center;
+}
+
+.carro{
+    background-color: white;
+    margin: auto;
+    width: 20%;
+    margin: 30px;
+    border-radius: 20px;
+    display: inline-table;
+    cursor: pointer;
+    transition: all 600ms ease-in-out;
+    transform: translateX(0) scale(1);
+}
+
+.carro:hover {
+    transform: translateX(1px) scale(1.1);
+}
+
+.carro figure img{
+    height:auto;
+    width: 100%;    
+    display: inline-block;
+}
+
+.carro figure figcaption {
+    padding: 20px 0px;
+    font-size: 1.6em;
+    color: #000b;
+    text-align: center;
+}
+
+.container-search{
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.form-control{
+    border: 0px 0px 4px 0px solid #c7c7c7c;
+    border-radius: 10px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+.form-control:focus{
+    border-color: lightskyblue;
+}
 
 
+.container-categorias{
+    width: 100%;
+    margin-top: 40px;
+}
 
+.container-categorias ul{
+    display: inline-block;
+    list-style: none;
+}
 
+.container-categorias ul li{
+    display: inline-block;
+}
 
+.ancor-category{
+    text-align: center;
+    margin: 20px;
+    font-size: 1.4em;
+}
+
+.ancor-ativo{
+    background-color: lightskyblue;
+    border-radius: 10px;
+    color: #22405D;
+    padding: 10px 20px;
+}
 

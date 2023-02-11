@@ -12,12 +12,15 @@ footer{
     padding: 0;
     z-index: 0;
     padding-bottom: 40px;
+    width: 100%;
+    margin: auto;
 }
 
 .apresentation > img{
-    margin: 0;
+    margin: auto;
     padding: 0;
     z-index: 0;
+    text-align: center;
 }
 
 .rodape {
@@ -94,8 +97,9 @@ footer{
     bottom: 20px;
     right:20px;
     vertical-align: middle;
+    width: auto;
+    height: auto;
 }
-
 
 .icone-whatsapp > a{
     text-decoration: none;
@@ -106,11 +110,12 @@ footer{
     width: 70px;
     z-index: 9;
     vertical-align: middle;
+    display: inline-block;
 }
 
 .container-text-icon{
     color:white;
-    font-size: .4em;
+    font-size: .6em;
     display: inline-block;
     background-color: #4CCA5B;
     border: 4px solid white;

@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>@yield('title')</title>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
         <link href=" {{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
         <link href=" {{ asset('css/header.css') }}" rel="stylesheet" type="text/css">
@@ -18,7 +19,6 @@
         <script src="/js/script.js" type="text/javascript"></script>         
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-       
     </head>
     <body>
         {{--inicializando o cabeçario da página--}}
@@ -90,7 +90,12 @@
                 </li>
 
                 <li class="item hidden">
-                    <button>Entrar</button>
+                    @auth
+                    <a href="/cars">Painel de controle</a>
+                    @endauth
+                    @guest
+                    <a href="/login">Entrar</a>
+                    @endguest
                 </li>
 
                 <li class="item hidden"> 

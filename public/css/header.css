@@ -12,7 +12,6 @@ header > div:last-child{
     clear: both;
 }
 
-
 .lista-contato, .lista-opcoes{
     display: inline-block;
     position: relative;
@@ -25,24 +24,15 @@ header > div:last-child{
 .lista-opcoes{
     padding: 11px 0;
     background-color: #22405D;
-}
-
-.item {
-    padding: 0px;
-    margin: auto;
-    height: auto;
-    display: inline-block;
-    text-align: center;
-}
-
-.lista-contato .item{
-    float: left;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .lista-contato a{
     text-decoration: none;
     float: right;
-    margin-right: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
     margin-top: 10px;
     border-radius: 30px;
 }
@@ -57,7 +47,27 @@ header > div:last-child{
     padding: 10px 0;
 }
 
-.item > button{
+.item {
+    position: relative;
+    padding: 0px;
+    margin: auto;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.lista-opcoes .item{
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+.lista-contato .item{
+    float: left;
+}
+
+.btn-opcoes,
+.item button,
+.item > a{
     height:auto;
     font-size:1.2em;
     font-weight: 400;
@@ -66,7 +76,6 @@ header > div:last-child{
     color:#fff;
     margin:auto;
     padding: 10px;
-    margin-left: 30px;
     opacity: .9;
     background-color: #fff0;
     border:none;
@@ -74,11 +83,14 @@ header > div:last-child{
     cursor: pointer;
 }
 
-.item {
-    position: relative;
+.item button:hover,
+.item > a:hover,
+.btn-opcoes:hover{
+    opacity: 1;
+    font-weight: 800;
 }
 
-.lista-opcoes button ion-icon {
+.btn-opcoes ion-icon {
     vertical-align: middle;
     transition: .8s;
 }
@@ -96,7 +108,6 @@ header > div:last-child{
     transition: 2s;
 }
 
-
 .lista-header > a{
     display: block;
     margin-bottom: 10px;
@@ -110,12 +121,10 @@ header > div:last-child{
     opacity: 1;
 }
 
-
 .icon-ativo{
     vertical-align: bottom;
     transform: rotate(-180deg);    
 }
-
 
 .item > a:hover{
     opacity: 1;

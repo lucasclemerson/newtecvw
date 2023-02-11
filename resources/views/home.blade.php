@@ -33,15 +33,42 @@
     </div>
 
 
+    {{-- list the cars --}}
     <div class="lista-carros">
         <div class="title-body">
             <h2>Um novo tempo. <h1>Uma nova Pollo Volkswagen</h1>.</h2>        
+            <div class="container-search">
+                <form action="/" method="GET">
+                    @csrf
+                    <div class="form-group">
+                        <input value="{{ $search }}" class="form-control" type="text" name="search" id="search" placeholder="Qual carro conbina mais com você?">
+                    </div>    
+                </form>
+            </div>
+            
+            <div class="container-categorias">
+                <ul>
+                    <li><a class="ancor-category @if ($search=='') ancor-ativo @endif" href="/"> Todos os veiculos</a></li>
+                   
+                    <li><a class="ancor-category @if ($search=='Pick-up') ancor-ativo @endif" href="/p?seach=Pick-up">Pick-up</a></li>
+                    <li><a class="ancor-category @if ($search=='Sedan') ancor-ativo @endif" href="/?seach=Sedan">Sedan</a></li>
+                    <li><a class="ancor-category @if ($search=='Hatch') ancor-ativo @endif" href="/?seach=Hatch">Hatch</a></li>     
+                  
+               </ul>
+
+            </div>
+         </div>
+
+        <div class="container-carros">        
+            @foreach ($cars as $car)
+            <div class="carro shadow-lg">
+                <figure>
+                    <img src="/img/carros/{{ $car->image }}" alt="Imagem do carro {{ $car->name }}">
+                    <figcaption>{{ $car->name }}</figcaption>
+                </figure>
+            </div>
+            @endforeach
         </div>
-
-        @php 
-            print_r($carros);
-        @endphp
-
     </div>
 </main>
 @endsection
