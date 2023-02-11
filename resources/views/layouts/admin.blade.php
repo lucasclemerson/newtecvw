@@ -15,11 +15,9 @@
 
         @if (session('msg'))
             <script type="text/javascript">
-                alert( {{ session('msg') }} );
+                alert("{{ session('msg') }}");
             </script>
         @endif
-
-
 
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
@@ -76,9 +74,11 @@
             </div>
         </nav>
 
-
         @yield('content')
 
+        <footer class="mt-5 mb-5 text-center">
+            <p>&copy{{ date('Y') }} Newtec VW, Todos os direitos reservados.</p> 
+        </footer>
     </body>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

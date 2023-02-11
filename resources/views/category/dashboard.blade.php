@@ -22,11 +22,11 @@
             <td scope="row">{{ $loop->index }}</td>
             <td>{{ $category->name }}</td>
             <td class="text-center"> 
-                <button class="btn btn-info">
-                    Editar 
-                </button>
+                <a href="/categorys/edit/{{ $category->id }}" class="btn btn-info">
+                    Editar
+                </a>
 
-                <form class="d-inline-block" action="/category/{{ $category->id }}" method="POST">
+                <form class="d-inline-block" action="/categorys/{{ $category->id }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">

@@ -30,9 +30,9 @@
             <td>{{ $criadores[$loop->index] }}</td>
             <td>{{ $car->last_update }}</td>
             <td class="text-center"> 
-                <button class="btn btn-info">
+                <a href="/cars/edit/{{ $car->id }}" class="btn btn-info">
                     Editar 
-                </button>
+                </a>
 
                 <form class="d-inline-block" action="/cars/{{ $car->id }}" method="POST">
                     @csrf

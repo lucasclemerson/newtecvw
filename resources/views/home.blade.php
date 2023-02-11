@@ -48,12 +48,15 @@
             
             <div class="container-categorias">
                 <ul>
-                    <li><a class="ancor-category @if ($search=='') ancor-ativo @endif" href="/"> Todos os veiculos</a></li>
-                   
-                    <li><a class="ancor-category @if ($search=='Pick-up') ancor-ativo @endif" href="/p?seach=Pick-up">Pick-up</a></li>
-                    <li><a class="ancor-category @if ($search=='Sedan') ancor-ativo @endif" href="/?seach=Sedan">Sedan</a></li>
-                    <li><a class="ancor-category @if ($search=='Hatch') ancor-ativo @endif" href="/?seach=Hatch">Hatch</a></li>     
+                    <li><a class="ancor-category @if ($search=='' and $category=='') ancor-ativo @endif" href="/"> Todos os veiculos</a></li>
                   
+                    @foreach ($categories as $c)
+                    <li>
+                        <a class="ancor-category @if ($category==$c->id) ancor-ativo @endif" href="/?category={{$c->id}}">
+                            {{$c->name}}
+                        </a>
+                    </li>
+                    @endforeach                    
                </ul>
 
             </div>

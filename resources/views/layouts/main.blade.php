@@ -44,8 +44,9 @@
                         <ion-icon name="chevron-down-outline"></ion-icon>
                     </button>
                     <div class="lista-header">
-                        <a href="#">Gol</a>
-                        <a href="#">Novo Pollo</a>
+                        @foreach ($cars_news as $car)
+                        <a href="#">{{ $car->name }}</a>
+                        @endforeach
                     </div>
                 </li>
 
